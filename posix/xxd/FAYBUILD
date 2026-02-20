@@ -1,0 +1,22 @@
+{
+  "pkgname": "xxd",
+  "pkgver": "1.0.0",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Hex dump and reverse hex dump utility",
+  "arch": ["x86_64", "riscv64"],
+  "realm": "posix",
+  "buildable": true,
+  "depends": [],
+  "makedepends": [],
+  "source": [],
+  "sha256sums": [],
+  "patches": [],
+  "build": [
+    "cc -o xxd xxd.c"
+  ],
+  "package": [
+    "mkdir -p $pkgdir/bin",
+    "cp xxd $pkgdir/bin/xxd"
+  ]
+}
