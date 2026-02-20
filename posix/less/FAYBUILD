@@ -1,0 +1,24 @@
+{
+  "pkgname": "less",
+  "pkgver": "661",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Terminal pager — view files one screen at a time",
+  "arch": ["x86_64"],
+  "realm": "posix",
+  "buildable": true,
+  "depends": [],
+  "makedepends": ["tcc"],
+  "source": ["https://www.greenwoodsoftware.com/less/less-661.tar.gz"],
+  "sha256sums": [""],
+  "patches": [],
+  "build": [
+    "cd less-661",
+    "tcc -c -DPOSIX -I. *.c",
+    "tcc -o less *.o"
+  ],
+  "package": [
+    "mkdir -p $pkgdir/bin",
+    "cp less-661/less $pkgdir/bin/less"
+  ]
+}

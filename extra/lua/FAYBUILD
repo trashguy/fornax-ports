@@ -1,0 +1,24 @@
+{
+  "pkgname": "lua",
+  "pkgver": "5.4.7",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Lightweight embeddable scripting language",
+  "arch": ["x86_64"],
+  "realm": "posix",
+  "buildable": true,
+  "depends": [],
+  "makedepends": ["tcc"],
+  "source": ["https://www.lua.org/ftp/lua-5.4.7.tar.gz"],
+  "sha256sums": ["9fbf588a9b1b72e1b45a1a06c8b9b5eee988851bf1d1ee0e62f406c0ddc7ec54"],
+  "patches": ["lua-fornax.patch"],
+  "build": [
+    "cd lua-5.4.7/src",
+    "tcc -c -DLUA_USE_POSIX -I. lapi.c lauxlib.c lbaselib.c lcode.c lcorolib.c lctype.c ldblib.c ldebug.c ldo.c ldump.c lfunc.c lgc.c linit.c liolib.c llex.c lmathlib.c lmem.c loadlib.c lobject.c lopcodes.c loslib.c lparser.c lstate.c lstring.c lstrlib.c ltable.c ltablib.c ltm.c lua.c lundump.c lutf8lib.c lvm.c lzio.c",
+    "tcc -o lua *.o -lm"
+  ],
+  "package": [
+    "mkdir -p $pkgdir/bin",
+    "cp lua-5.4.7/src/lua $pkgdir/bin/lua"
+  ]
+}
