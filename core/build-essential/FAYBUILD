@@ -1,0 +1,17 @@
+{
+  "pkgname": "build-essential",
+  "pkgver": "0.15.0",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Zig toolchain for native realm development",
+  "arch": ["x86_64", "riscv64"],
+  "realm": "native",
+  "buildable": false,
+  "depends": [],
+  "makedepends": [],
+  "source": [],
+  "sha256sums": [],
+  "patches": [],
+  "build": [],
+  "package": []
+}

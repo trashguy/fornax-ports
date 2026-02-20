@@ -1,0 +1,18 @@
+{
+  "pkgname": "build-essential-posix",
+  "pkgver": "0.1.0",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "GCC toolchain for POSIX realm development",
+  "arch": ["x86_64"],
+  "realm": "posix",
+  "buildable": false,
+  "depends": ["gcc", "binutils", "make"],
+  "makedepends": [],
+  "source": [],
+  "sha256sums": [],
+  "patches": [],
+  "build": [],
+  "package": [],
+  "_note": "Meta-package. Requires kernel fork/exec/signals support (not yet implemented)."
+}
