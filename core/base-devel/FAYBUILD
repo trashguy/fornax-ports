@@ -1,5 +1,5 @@
 {
-  "pkgname": "build-essential",
+  "pkgname": "base-devel",
   "pkgver": "0.15.0",
   "pkgrel": 1,
   "epoch": 0,

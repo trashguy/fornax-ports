@@ -1,5 +1,5 @@
 {
-  "pkgname": "build-essential-posix",
+  "pkgname": "base-devel-posix",
   "pkgver": "0.1.0",
   "pkgrel": 1,
   "epoch": 0,
