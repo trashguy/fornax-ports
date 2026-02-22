@@ -1,0 +1,25 @@
+{
+  "pkgname": "iwlwifi",
+  "pkgver": "0.1.0",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Intel WiFi driver for Fornax OS (AX200/AX210/AX211/BE200)",
+  "arch": ["x86_64"],
+  "realm": "native",
+  "buildable": true,
+  "depends": [],
+  "makedepends": [],
+  "source": ["https://github.com/trashguy/fornax-wifi/archive/refs/tags/v0.1.0.tar.gz"],
+  "sha256sums": [""],
+  "patches": [],
+  "build": [
+    "cd fornax-wifi-0.1.0",
+    "zig build iwlwifi -Doptimize=ReleaseSafe"
+  ],
+  "package": [
+    "mkdir -p $pkgdir/srv/net $pkgdir/lib/firmware/iwlwifi",
+    "cp fornax-wifi-0.1.0/zig-out/bin/iwlwifi $pkgdir/srv/net/iwlwifi",
+    "cp fornax-wifi-0.1.0/zig-out/bin/wifid $pkgdir/srv/net/wifid",
+    "cp fornax-wifi-0.1.0/iwlwifi/firmware/*.ucode $pkgdir/lib/firmware/iwlwifi/"
+  ]
+}

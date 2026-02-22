@@ -1,0 +1,23 @@
+{
+  "pkgname": "r8169",
+  "pkgver": "0.1.0",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Realtek RTL8111/8168/8125 NIC driver for Fornax OS",
+  "arch": ["x86_64"],
+  "realm": "native",
+  "buildable": true,
+  "depends": [],
+  "makedepends": [],
+  "source": ["https://github.com/trashguy/fornax-nics/archive/refs/tags/v0.1.0.tar.gz"],
+  "sha256sums": [""],
+  "patches": [],
+  "build": [
+    "cd fornax-nics-0.1.0",
+    "zig build r8169 -Doptimize=ReleaseSafe"
+  ],
+  "package": [
+    "mkdir -p $pkgdir/srv/net",
+    "cp fornax-nics-0.1.0/zig-out/bin/r8169 $pkgdir/srv/net/r8169"
+  ]
+}

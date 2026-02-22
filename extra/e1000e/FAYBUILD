@@ -1,0 +1,23 @@
+{
+  "pkgname": "e1000e",
+  "pkgver": "0.1.0",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Intel e1000e GbE NIC driver for Fornax OS",
+  "arch": ["x86_64"],
+  "realm": "native",
+  "buildable": true,
+  "depends": [],
+  "makedepends": [],
+  "source": ["https://github.com/trashguy/fornax-nics/archive/refs/tags/v0.1.0.tar.gz"],
+  "sha256sums": [""],
+  "patches": [],
+  "build": [
+    "cd fornax-nics-0.1.0",
+    "zig build e1000e -Doptimize=ReleaseSafe"
+  ],
+  "package": [
+    "mkdir -p $pkgdir/srv/net",
+    "cp fornax-nics-0.1.0/zig-out/bin/e1000e $pkgdir/srv/net/e1000e"
+  ]
+}
