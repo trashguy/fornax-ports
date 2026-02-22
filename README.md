@@ -21,7 +21,7 @@ fornax-ports/
 Packages are organized into categories:
 
 - **core/** — base OS components (init, fsh, fxfs, etc.)
-- **extra/** — additional native Zig packages
+- **extra/** — additional native Zig packages (including hardware drivers like [fornax-amdgpu](https://github.com/trashguy/fornax-amdgpu))
 - **posix/** — C programs built against the Fornax POSIX shim (musl libc)
 
 ## How packages work

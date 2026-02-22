@@ -1,0 +1,23 @@
+{
+  "pkgname": "fornax-amdgpu",
+  "pkgver": "0.1.0",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "AMD GPU driver for Fornax OS (RDNA 2/4)",
+  "arch": ["x86_64"],
+  "realm": "native",
+  "buildable": true,
+  "depends": [],
+  "makedepends": [],
+  "source": ["https://github.com/trashguy/fornax-amdgpu/archive/refs/tags/v0.1.0.tar.gz"],
+  "sha256sums": [""],
+  "patches": [],
+  "build": [
+    "cd fornax-amdgpu-0.1.0",
+    "zig build -Doptimize=ReleaseSafe"
+  ],
+  "package": [
+    "mkdir -p $pkgdir/srv",
+    "cp fornax-amdgpu-0.1.0/zig-out/bin/gpud $pkgdir/srv/gpud"
+  ]
+}
