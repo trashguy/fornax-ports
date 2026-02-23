@@ -1,0 +1,20 @@
+{
+  "pkgname": "ca-certificates",
+  "pkgver": "2025.12.02",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Mozilla CA certificate bundle for TLS verification",
+  "arch": ["x86_64", "riscv64"],
+  "realm": "native",
+  "buildable": true,
+  "depends": [],
+  "makedepends": [],
+  "source": ["https://curl.se/ca/cacert.pem"],
+  "sha256sums": ["f1407d974c5ed87d544bd931a278232e13925177e239fca370619aba63c757b4"],
+  "patches": [],
+  "build": [],
+  "package": [
+    "mkdir -p $pkgdir/etc/ssl/certs",
+    "cp $srcdir/cacert.pem $pkgdir/etc/ssl/certs/ca-certificates.crt"
+  ]
+}
