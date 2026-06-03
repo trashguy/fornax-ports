@@ -1,4 +1,53 @@
 {
-  "version": 1,
-  "packages": {}
+  "packages": {
+    "lua": {
+      "version": "5.4.7-1",
+      "description": "Lightweight embeddable scripting language",
+      "url": "http://10.0.2.2:8000/lua-5.4.7-1.tar.gz",
+      "depends": [],
+      "sha256": ""
+    },
+    "base-devel": {
+      "version": "0.15.0-1",
+      "description": "Zig toolchain for native realm development",
+      "url": "http://10.0.2.2:8000/base-devel-0.15.0-1.tar.gz",
+      "depends": [],
+      "sha256": ""
+    },
+    "hello": {
+      "version": "1.0.0-1",
+      "description": "Hello world test package for Fornax",
+      "url": "http://10.0.2.2:8000/hello-1.0.0-1.tar.gz",
+      "depends": [],
+      "sha256": ""
+    },
+    "base-devel-posix": {
+      "version": "0.1.0-1",
+      "description": "GCC toolchain for POSIX realm development",
+      "url": "http://10.0.2.2:8000/base-devel-posix-0.1.0-1.tar.gz",
+      "depends": ["gcc","binutils","make"],
+      "sha256": ""
+    },
+    "hello-posix": {
+      "version": "1.0.0-1",
+      "description": "Hello world POSIX test package",
+      "url": "http://10.0.2.2:8000/hello-posix-1.0.0-1.tar.gz",
+      "depends": [],
+      "sha256": ""
+    },
+    "less": {
+      "version": "661-1",
+      "description": "Terminal pager — view files one screen at a time",
+      "url": "http://10.0.2.2:8000/less-661-1.tar.gz",
+      "depends": [],
+      "sha256": ""
+    },
+    "xxd": {
+      "version": "1.0.0-1",
+      "description": "Hex dump and reverse hex dump utility",
+      "url": "http://10.0.2.2:8000/xxd-1.0.0-1.tar.gz",
+      "depends": [],
+      "sha256": ""
+    }
+  }
 }

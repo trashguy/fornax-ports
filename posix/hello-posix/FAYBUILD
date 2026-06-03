@@ -1,0 +1,21 @@
+{
+  "pkgname": "hello-posix",
+  "pkgver": "1.0.0",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Hello world POSIX test package",
+  "arch": ["x86_64"],
+  "realm": "posix",
+  "buildable": true,
+  "depends": [],
+  "makedepends": [],
+  "source": [],
+  "sha256sums": [],
+  "patches": [],
+  "build": [],
+  "package": [
+    "mkdir -p $pkgdir/bin",
+    "echo '#!/bin/fsh\necho Hello from POSIX realm!' > $pkgdir/bin/hello-px",
+    "chmod +x $pkgdir/bin/hello-px"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "pkgname": "iperf",
+  "pkgver": "1.0.0",
+  "pkgrel": 1,
+  "pkgdesc": "Network throughput measurement tool for Fornax",
+  "arch": ["x86_64", "riscv64", "aarch64"],
+  "realm": "native",
+  "buildable": true,
+  "depends": [],
+  "source": [],
+  "build": [],
+  "package": ["mkdir -p $pkgdir/bin", "cp $srcdir/iperf $pkgdir/bin/iperf"]
+}

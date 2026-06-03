@@ -1,0 +1,21 @@
+{
+  "pkgname": "hello",
+  "pkgver": "1.0.0",
+  "pkgrel": 1,
+  "epoch": 0,
+  "pkgdesc": "Hello world test package for Fornax",
+  "arch": ["x86_64", "riscv64"],
+  "realm": "native",
+  "buildable": true,
+  "depends": [],
+  "makedepends": [],
+  "source": [],
+  "sha256sums": [],
+  "patches": [],
+  "build": [],
+  "package": [
+    "mkdir -p $pkgdir/bin",
+    "echo '#!/bin/fsh\necho Hello from fay!' > $pkgdir/bin/hello-fay",
+    "chmod +x $pkgdir/bin/hello-fay"
+  ]
+}
